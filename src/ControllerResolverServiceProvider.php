@@ -26,7 +26,7 @@ class ControllerResolverServiceProvider implements ServiceProviderInterface
 
             },
 
-            'ellipse.resolvers.middleware' => function ($container, callable $previous = null) {
+            'ellipse.resolvers.handlers' => function ($container, callable $previous = null) {
 
                 $namespace = $container->get('resolvers.controller.namespace');
 
