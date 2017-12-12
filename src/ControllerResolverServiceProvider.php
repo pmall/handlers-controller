@@ -14,7 +14,7 @@ class ControllerResolverServiceProvider implements ServiceProviderInterface
     public function getExtensions()
     {
         return [
-            'resolvers.controller.namespace' => function ($container, string $previous = null) {
+            'ellipse.resolvers.controller.namespace' => function ($container, string $previous = null) {
 
                 if (is_null($previous)) {
 
@@ -28,7 +28,7 @@ class ControllerResolverServiceProvider implements ServiceProviderInterface
 
             'ellipse.resolvers.handlers' => function ($container, callable $previous = null) {
 
-                $namespace = $container->get('resolvers.controller.namespace');
+                $namespace = $container->get('ellipse.resolvers.controller.namespace');
 
                 $previous = $previous ?: function ($element) {
 
